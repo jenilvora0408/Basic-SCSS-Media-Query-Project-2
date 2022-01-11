@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap");
 * {
   margin: 0px 5px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: grey;
+  color: white;
 }
 
 * body {
@@ -14,7 +18,7 @@
   top: 60%;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   font-size: 35px;
   color: red;
 }
@@ -30,18 +34,20 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .header__logo {
   font-size: 4vw;
+  margin: 100px;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .header__menu {
@@ -50,10 +56,17 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   font-size: 2, 5vw;
   gap: 15px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.header__menu div {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bolder;
 }
 
 .main {
@@ -63,12 +76,12 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .main__image {
-  background-image: url("./images/Portrait.png");
+  background-image: url("./images/Me.jpeg");
   background-size: contain;
   background-position: left center;
   background-repeat: no-repeat;
@@ -80,24 +93,27 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Varela Round", sans-serif;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .main__text-1 {
-  font-size: 10vw;
+  font-size: 7.5vw;
 }
 
-.main__text-2, .main__text-3, .main__text-4 {
-  font-size: 5vw;
+.main__text-2,
+.main__text-3,
+.main__text-4 {
+  font-size: 4vw;
 }
 
 .footer {
@@ -107,27 +123,28 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 20px;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin-right: 10%;
 }
 
 .footer [class^="footer__"] img {
+  cursor: pointer;
   width: 5.3vw;
 }
 
 @media (max-width: 650px) {
   .header {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .header__logo {
     font-size: 40px;
@@ -138,14 +155,14 @@
   .main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .main__image {
     width: 200px;
@@ -160,13 +177,15 @@
   .main__text-1 {
     display: none;
   }
-  .main__text-2, .main__text-3, .main__text-4 {
+  .main__text-2,
+  .main__text-3,
+  .main__text-4 {
     font-size: 30px;
   }
   .footer {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin: 0px;
   }
   .footer [class^="footer__"] img {
